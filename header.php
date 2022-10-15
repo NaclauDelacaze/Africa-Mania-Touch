@@ -17,25 +17,22 @@ session_start();
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
 		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="Asset/CSS/bootstrap.min.css"/>
 
 		<!-- Slick -->
-		<link type="text/css" rel="stylesheet" href="css/slick.css"/>
-		<link type="text/css" rel="stylesheet" href="css/slick-theme.css"/>
+		<link type="text/css" rel="stylesheet" href="Asset/CSS/slick.css"/>
+		<link type="text/css" rel="stylesheet" href="Asset/CSS/slick-theme.css"/>
 
 		<!-- nouislider -->
-		<link type="text/css" rel="stylesheet" href="css/nouislider.min.css"/>
+		<link type="text/css" rel="stylesheet" href="Asset/CSS/nouislider.min.css"/>
 
 		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="Asset/CSS/font-awesome.min.css">
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-		<link type="text/css" rel="stylesheet" href="css/accountbtn.css"/>
+		<link type="text/css" rel="stylesheet" href="Asset/CSS/style.css"/>
+		<link type="text/css" rel="stylesheet" href="Asset/CSS/accountbtn.css"/>
 		
-		
-		
-         
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,9 +42,9 @@ session_start();
 		<![endif]-->
     <style>
         #navigation {
-          background: #FF4E50;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #F9D423, #FF4E50);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #F9D423, #FF4E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          background: goldenrod;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #F9D423, goldenrod);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #F9D423, goldenrod); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
           
         }
@@ -66,9 +63,9 @@ session_start();
 		        #top-header {
               
   
-            background: #870000;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #190A05, #870000);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #190A05, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: goldenrod;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #190A05, goldenrod);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #190A05, goldenrod); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
         }
@@ -141,12 +138,12 @@ session_start();
                                 
                                 echo '
                                <div class="dropdownn">
-                                  <a href="#" class="dropdownn" data-toggle="modal" data-target="#myModal" ><i class="fa fa-user-o"></i> HI '.$row["first_name"].'</a>
-                                  <div class="dropdownn-content">
-                                    <a href="" data-toggle="modal" data-target="#profile"><i class="fa fa-user-circle" aria-hidden="true" ></i>My Profile</a>
-                                    <a href="logout.php"  ><i class="fa fa-sign-in" aria-hidden="true"></i>Log out</a>
+                                  	<a href="#" class="dropdownn" data-toggle="modal" data-target="#myModal" ><i class="fa fa-user-o"></i> HI '.$row["first_name"].'</a>
+                                  	<div class="dropdownn-content">
+                                    	<a href="" data-toggle="modal" data-target="#profile"><i class="fa fa-user-circle" aria-hidden="true" ></i>My Profile</a>
+                                    	<a href="logout.php"  ><i class="fa fa-sign-in" aria-hidden="true"></i>Log out</a>
                                     
-                                  </div>
+                                  	</div>
                                 </div>';
 
                             }else{ 
@@ -182,7 +179,7 @@ session_start();
 						<div class="col-md-3" >
 							<div class="header-logo">
 								<a href="index.php" class="logo" border-radius="50%;">
-									<img src="asset/Images/Logos/NewlogoBisGold.png" style="width:50%;">	
+									<img src="Asset/Images/Logos/NewlogoBisGold.png" style="width:50%;">	
 								</a>
 							</div>
 						</div>
@@ -209,7 +206,7 @@ session_start();
 							<div class="header-ctn">
 								<!-- Wishlist -->
 								<div>
-									<a href="https://github.com/puneethreddyhc" >
+									<a href="https://github.com/NaclauDelacaze" target="_blank">
 										<i class="fa fa-github"></i>
 										<span>Github</span>
 										
@@ -225,18 +222,14 @@ session_start();
 										<div class="badge qty">0</div>
 									</a>
 									<div class="cart-dropdown"  >
-										<div class="cart-list" id="cart_product">
-										
-											
-										</div>
+										<div class="cart-list" id="cart_product"></div>
 										
 										<div class="cart-btns">
-												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>  edit cart</a>
-											
+											<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>edit cart</a>
 										</div>
 									</div>
 										
-									</div>
+								</div>
 								<!-- /Cart -->
 
 								<!-- Menu Toogle -->

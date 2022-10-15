@@ -171,14 +171,14 @@ $(document).ready(function(){
 		event.preventDefault();
 		$(".overlay").show();
 		$.ajax({
-			url	:	"login.php",
+			url	:	"../login.php",
 			method:	"POST",
 			data	:$("#login").serialize(),
 			success	:function(data){
 				if(data == "login_success"){
-					window.location.href = "index.php";
+					window.location.href = "../index.php";
 				}else if(data == "cart_login"){
-					window.location.href = "cart.php";
+					window.location.href = "../cart.php";
 				}else{
 					$("#e_msg").html(data);
 					$(".overlay").hide();
@@ -193,13 +193,13 @@ $(document).ready(function(){
 		event.preventDefault();
 		$(".overlay").show();
 		$.ajax({
-			url : "register.php",
+			url : "../register.php",
 			method : "POST",
 			data : $("#signup_form").serialize(),
 			success : function(data){
 				$(".overlay").hide();
 				if (data == "register_success") {
-					window.location.href = "cart.php";
+					window.location.href = "../cart.php";
 				}else{
 					$("#signup_msg").html(data);
 				}
@@ -213,7 +213,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$(".overlay").show();
 		$.ajax({
-			url : "offersmail.php",
+			url : "../offersmail.php",
 			method : "POST",
 			data : $("#offer_form").serialize(),
 			success : function(data){
@@ -235,7 +235,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$(".overlay").show();
 		$.ajax({
-			url : "action.php",
+			url : "../action.php",
 			method : "POST",
 			data : {addToCart:1,proId:pid,},
 			success : function(data){
@@ -251,7 +251,7 @@ $(document).ready(function(){
 	count_item();
 	function count_item(){
 		$.ajax({
-			url : "action.php",
+			url : "../action.php",
 			method : "POST",
 			data : {count_item:1},
 			success : function(data){
@@ -265,7 +265,7 @@ $(document).ready(function(){
 	getCartItem();
 	function getCartItem(){
 		$.ajax({
-			url : "action.php",
+			url : "../action.php",
 			method : "POST",
 			data : {Common:1,getCartItem:1},
 			success : function(data){
@@ -317,7 +317,7 @@ $(document).ready(function(){
         var remove = $(this).parent().parent().parent();
         var remove_id = remove.find(".remove").attr("remove_id");
         $.ajax({
-            url	:	"action.php",
+            url	:	"../action.php",
             method	:	"POST",
             data	:	{removeItemFromCart:1,rid:remove_id},
             success	:	function(data){
@@ -337,7 +337,7 @@ $(document).ready(function(){
 		var update_id = update.find(".update").attr("update_id");
 		var qty = update.find(".qty").val();
 		$.ajax({
-			url	:	"action.php",
+			url	:	"../action.php",
 			method	:	"POST",
 			data	:	{updateCartItem:1,update_id:update_id,qty:qty},
 			success	:	function(data){
@@ -360,7 +360,7 @@ $(document).ready(function(){
 	function checkOutDetails(){
 	 $('.overlay').show();
 		$.ajax({
-			url : "action.php",
+			url : "../action.php",
 			method : "POST",
 			data : {Common:1,checkOutDetails:1},
 			success : function(data){
@@ -392,7 +392,7 @@ $(document).ready(function(){
 	page();
 	function page(){
 		$.ajax({
-			url	:	"action.php",
+			url	:	"../action.php",
 			method	:	"POST",
 			data	:	{page:1},
 			success	:	function(data){
@@ -403,7 +403,7 @@ $(document).ready(function(){
 	$("body").delegate("#page","click",function(){
 		var pn = $(this).attr("page");
 		$.ajax({
-			url	:	"action.php",
+			url	:	"../action.php",
 			method	:	"POST",
 			data	:	{getProduct:1,setPage:1,pageNumber:pn},
 			success	:	function(data){
